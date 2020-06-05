@@ -1,0 +1,111 @@
+.main{
+  height: 100vh;
+  width:100vw;
+  &_header{
+    height:100px;
+    background-color: orange;
+    width: 100%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    color:#fff;
+    font-family: Impact;
+    position: relative;
+    &_logo{
+      font-size: 70px;
+     
+      line-height: 100px;
+      margin-left: 40px;
+      display: flex;
+      letter-spacing: 3px;
+      &_icon{
+        margin-left: 20px;
+        
+      }
+    }
+    &_item{
+      display: flex;
+      font-size: 20px;
+      position: absolute;
+      top: 25px;
+      right:40px;
+      letter-spacing: 2px;
+      color: orange;
+      &_edit{
+        margin-right: 40px;
+        border: 2px solid #FFF;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: #fff;
+        transition: .4s;
+      }
+      &_edit:hover{
+        background-color:orange;
+        color:#fff;
+      }
+      &_login{
+        border: 2px solid #FFF;
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: #fff;
+        transition: .4s;
+      } 
+      &_login:hover{
+        background-color:orange;
+        color:#fff;
+      }
+    }
+  }
+  &_body{
+    background-color:#fff;
+    height: calc(100vh - 100px);
+    font-family: Impact;
+    &_topics{
+      background-color: #fff;
+      height: calc(100vh - 100px);
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 30px;
+      font-size: 60px;
+      color: #fff;
+      text-shadow: -4px -4px 1px orange, 3px 3px 10px #000;
+      &_group{
+        background-color: orange;
+        font-size: 40px;
+        width:400px;
+        height: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        color: #fff;
+        text-shadow: initial;
+        &_title{
+          font-weight: bold;
+          position: absolute;
+          top: 40px;
+          left:125px;
+        }
+        &_btn{
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          font-size: 30px;
+          background-color: #fff;
+          color: orange;
+          border: 1px solid orange;
+          padding: 5px 20px;
+          border-radius: 20px;
+          border: 2px solid #FFF;
+          transition: .4s;
+        }
+        &_btn:hover{
+          background-color:orange;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
