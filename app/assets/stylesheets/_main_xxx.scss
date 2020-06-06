@@ -13,7 +13,6 @@
     position: relative;
     &_logo{
       font-size: 70px;
-     
       line-height: 100px;
       margin-left: 40px;
       display: flex;
@@ -29,7 +28,7 @@
       position: absolute;
       top: 25px;
       right:40px;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       color: orange;
       &_edit{
         margin-right: 40px;
@@ -38,6 +37,10 @@
         border-radius: 30px;
         background-color: #fff;
         transition: .4s;
+        &_icon{
+          text-decoration: none;
+          color: orange;
+        }
       }
       &_edit:hover{
         background-color:orange;
@@ -48,6 +51,7 @@
         padding: 10px 20px;
         border-radius: 30px;
         background-color: #fff;
+        font-weight: bold;
         transition: .4s;
       } 
       &_login:hover{
@@ -72,7 +76,6 @@
       text-shadow: -4px -4px 1px orange, 3px 3px 10px #000;
       &_group{
         background-color: orange;
-        font-size: 40px;
         width:400px;
         height: 200px;
         margin: 0 auto;
@@ -82,29 +85,32 @@
         border-radius: 20px;
         color: #fff;
         text-shadow: initial;
-        &_title{
-          font-weight: bold;
-          position: absolute;
-          top: 40px;
-          left:125px;
-        }
-        &_btn{
-          position: absolute;
-          bottom: 20px;
-          right: 30px;
-          font-size: 30px;
-          background-color: #fff;
-          color: orange;
-          border: 1px solid orange;
-          padding: 5px 20px;
-          border-radius: 20px;
-          border: 2px solid #FFF;
-          transition: .4s;
-        }
-        &_btn:hover{
-          background-color:orange;
-          color: #fff;
-        }
+        &_botton{
+          text-decoration: none;
+          color:#fff;
+          &_title{
+            font-weight: bold;
+            padding-top: 20px;
+            font-size: 5vh;
+          }
+          &_btn{
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            font-size: 30px;
+            background-color: #fff;
+            color: orange;
+            border: 1px solid orange;
+            padding: 5px 20px;
+            border-radius: 20px;
+            border: 2px solid #FFF;
+            transition: .4s;
+          }
+          &_btn:hover{
+            background-color:orange;
+            color: #fff;
+          }
+       }
       }
     }
   }
