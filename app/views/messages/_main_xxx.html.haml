@@ -6,22 +6,21 @@
         = icon("far", "comment-dots")
     .main_header_item
       .main_header_item_edit
-        edit
+        = link_to edit_user_path(current_user),  class: "main_header_item_edit_icon" do
+          = ( "Edit" )
+          
       .main_header_item_login
-        login
+        = current_user.name
   
   
   .main_body
     .main_body_topics
-      Let's conversation!!
-      .main_body_topics_group 
-        .main_body_topics_group_title
-          タイトル
-        .main_body_topics_group_btn
-          Enter
-
-      .main_body_topics_group 
-        .main_body_topics_group_title
-          タイトル
-        .main_body_topics_group_btn
-          Enter
+      =link_to new_group_path  do
+        =("Let's conversation!!")
+        - @group.each do | group |
+          .main_body_topics_group 
+            = link_to '#' , class: "main_body_topics_group_botton" do
+              .main_body_topics_group_botton_title
+                = group.title
+              .main_body_topics_group_botton_btn
+                Enter
