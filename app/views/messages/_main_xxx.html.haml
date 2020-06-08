@@ -23,4 +23,5 @@
               .main_body_topics_group_botton_title
                 = group.title
               .main_body_topics_group_botton_btn
-                Enter
+                = link_to  group_comments_path(group) do
+                  = ("enter")
