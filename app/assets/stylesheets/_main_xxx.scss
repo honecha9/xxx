@@ -1,19 +1,20 @@
 .main{
   height: 100vh;
   width:100vw;
+  font-family: "genkai-mincho";
   &_header{
     height:100px;
-    background-color: orange;
+    background-color: #008bbb;
     width: 100%;
     opacity: 0.9;
     display: flex;
     justify-content: space-between;
     color:#fff;
-    font-family: Impact;
+    border-bottom: 5px ridge #fff;
     position: relative;
     &_logo{
       font-size: 70px;
-      line-height: 100px;
+      line-height: 90px;
       margin-left: 40px;
       display: flex;
       letter-spacing: 3px;
@@ -43,7 +44,7 @@
         }
       }
       &_edit:hover{
-        background-color:orange;
+        background-color:#008bbb;
         color:#fff;
       }
       &_login{
@@ -55,17 +56,20 @@
         transition: .4s;
       } 
       &_login:hover{
-        background-color:orange;
-        color:#fff;
+        background-color:#008bbb;
+        color:rgb(255,215,0);
       }
     }
   }
   &_body{
-    background-color:#fff;
+    background-image: url("https://images.pexels.com/photos/2422280/pexels-photo-2422280.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
     height: calc(100vh - 100px);
-    font-family: Impact;
+    font-family: "genkai-mincho";
+    background-color: #008bbb;
+    opacity: 0.9;
+    overflow: scroll;
     &_topics{
-      background-color: #fff;
       height: calc(100vh - 100px);
       width: 600px;
       margin: 0 auto;
@@ -73,9 +77,17 @@
       padding: 30px;
       font-size: 60px;
       color: #fff;
-      text-shadow: -4px -4px 1px orange, 3px 3px 10px #000;
+      text-shadow: -4px -4px 1px #8b008b, 3px 3px 10px #000;
+      &_con{
+        text-decoration: none;
+        color: rgb(255,215,0);
+      }
+      &_con:hover{
+        color:#8b008b;
+        text-shadow: -4px -4px 1px rgb(255,215,0), 3px 3px 10px #000;
+      }
       &_group{
-        background-color: orange;
+        background-color: rgba(255,215,0,0.7);
         width:400px;
         height: 200px;
         margin: 0 auto;
@@ -83,34 +95,33 @@
         position: relative;
         margin-bottom: 30px;
         border-radius: 20px;
-        color: #fff;
         text-shadow: initial;
-        &_botton{
-          text-decoration: none;
-          color:#fff;
-          &_title{
-            font-weight: bold;
-            padding-top: 20px;
-            font-size: 5vh;
-          }
-          &_btn{
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 30px;
-            background-color: #fff;
-            color: orange;
-            border: 1px solid orange;
+        &_title{
+          font-weight: bold;
+          padding-top: 20px;
+          font-size: 7vh;
+        }
+        &_btn{
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          font-size: 30px;
+          &_henko{
+            text-decoration: none;
+            color: #8b008b;
             padding: 5px 20px;
             border-radius: 20px;
             border: 2px solid #FFF;
             transition: .4s;
+            background-color: rgb(255,215,0);
           }
-          &_btn:hover{
-            background-color:orange;
-            color: #fff;
+          &_henko:hover{
+          background-color: #8b008b;
+          color: #fff;
+
           }
-       }
+        }
+        
       }
     }
   }
