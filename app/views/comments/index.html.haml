@@ -1,7 +1,7 @@
 .main
   .main_header
     .main_header_logo
-      Tooron
+      High Ronpa!!
       .main_header_logo_icon
         = icon("far", "comment-dots")
     .main_header_item
@@ -10,22 +10,37 @@
           = ( "Edit" )    
       .main_header_item_login
         = current_user.name
+  .text
+    .text_chat
+      - @comments.each do |comment|
+        .text_chat_right
+          .text_chat_right_box
+            .text_chat_right_box_text
+              = comment.texta
+            .text_chat_right_box_name
+              = comment.user.name
+        .text_chat_clear 
+      
+        .text_chat_left
+          .text_chat_left_box
+            .text_chat_left_box_text
+              = comment.textb
+            .text_chat_left_box_name
+              = comment.user.name
+        .text_chat_clear
   
-  .main_chat
-    - @comments.each do |comment|
-      .main_chat_right
-        .main_chat_right_box
-          .main_chat_right_box_text
-            = comment.text
-          .main_chat_right_box_name
-            = current_user.name
-      .maim_chat_clear
 
+  .main_box
+    .main_box_right
+      = form_for [@group, @comment] do |f|
+        .form__text
+          = f.text_field :texta, class: 'form__text__message', placeholder: 'type a message'
+        = f.submit 'Send', class: 'form__submit'
 
-
-  .form
-    = form_for [@group, @comment] do |f|
-      .form__text
-        = f.text_field :text, class: 'form__text__message', placeholder: 'type a message'
-      = f.submit 'Send', class: 'form__submit'
-  
+    .main_box_right
+      = form_for [@group, @comment] do |f|
+        .form__text
+          = f.text_field :textb, class: 'form__text__message', placeholder: 'type a message'
+        = f.submit 'Send', class: 'form__submit'
+    .main_box_exit
+      = link_to "Exit", root_path, class: "main_box_exit_btn"

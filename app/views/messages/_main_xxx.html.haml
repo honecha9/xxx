@@ -1,7 +1,7 @@
 .main
   .main_header
     .main_header_logo
-      Tooron
+      High Ronpa!
       .main_header_logo_icon
         = icon("far", "comment-dots")
     .main_header_item
@@ -15,13 +15,10 @@
   
   .main_body
     .main_body_topics
-      =link_to new_group_path  do
-        =("Let's conversation!!")
-        - @group.each do | group |
-          .main_body_topics_group 
-            = link_to '#' , class: "main_body_topics_group_botton" do
-              .main_body_topics_group_botton_title
-                = group.title
-              .main_body_topics_group_botton_btn
-                = link_to  group_comments_path(group) do
-                  = ("enter")
+      =link_to "Let's conversation!!", new_group_path , class:"main_body_topics_con"
+      - @group.each do | group |
+        .main_body_topics_group 
+          .main_body_topics_group_title
+            = group.title
+          .main_body_topics_group_btn
+            = link_to "Enter", group_comments_path(group), class: "main_body_topics_group_btn_henko"

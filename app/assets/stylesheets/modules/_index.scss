@@ -1,39 +1,42 @@
-.main_chat{
-  width: calc(100vw - 300px);
-  height: calc(100vh - 250px);
-  background-color: purple;
-  margin: 0 auto;
-  padding: 0 50px;
-  font-size: 16px;
-  word-wrap: break-word;
-  white-space: normal;
-  &_right{
-    float: right;
-    line-height: 1.3em;
-    padding-top: 40px;
-    &_box{
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 2px solid #FFF;
-      border-radius: 20px 0px 20px 20px;
+.text{
+  background-color: #008bbb;
+  height: calc(100vh - 200px);
+  overflow: scroll;
+    &_chat{
+    width: calc(100vw - 300px);
+    background-color: purple;
+    margin: 0 auto;
+    padding: 0 50px;
+    font-size: 16px;
+    word-wrap: break-word;
+    white-space: normal;
+    &_right{
+      float: right;
+      line-height: 1.3em;
+      padding-top: 40px;
+      &_box{
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 2px solid #FFF;
+        border-radius: 20px 0px 20px 20px;
+      }
     }
-  }
-  &_clear{
-    clear: both;
-  }
-  &_left{
-    float: left;
-    line-height: 1.3em;
-    padding-top: 10px;
-    &_box{
-      margin-bottom: 20px;
-      padding: 15px;
-      border: 2px solid #FFF;
-      border-radius: 0px 20px 20px 20px;
-    }
-  }
     &_clear{
-    clear: both;
+      clear: both;
+    }
+    &_left{
+      float: left;
+      line-height: 1.3em;
+      padding-top: 10px;
+      &_box{
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 2px solid #FFF;
+        border-radius: 0px 20px 20px 20px;
+      }
+    }
+      &_clear{
+      clear: both;
+    }
   }
-  
 }
