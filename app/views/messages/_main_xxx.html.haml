@@ -6,11 +6,11 @@
         = icon("far", "comment-dots")
     .main_header_item
       .main_header_item_edit
-        = link_to edit_user_path(current_user),  class: "main_header_item_edit_icon" do
-          = ( "Edit" )
+        = ( "Edit" )
           
       .main_header_item_login
-        = current_user.name
+        = link_to edit_user_path(current_user),  class: "main_header_item_login_user" do
+          = current_user.name
   
   
   .main_body
@@ -22,3 +22,4 @@
             = group.title
           .main_body_topics_group_btn
             = link_to "Enter", group_comments_path(group), class: "main_body_topics_group_btn_henko"
+            = link_to "Delete", group_path(group), method: :delete , class: "main_body_topics_group_btn_bot"

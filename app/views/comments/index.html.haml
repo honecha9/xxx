@@ -1,7 +1,7 @@
 .main
   .main_header
     .main_header_logo
-      High Ronpa!!
+      = @group.title
       .main_header_logo_icon
         = icon("far", "comment-dots")
     .main_header_item
@@ -12,35 +12,62 @@
         = current_user.name
   .text
     .text_chat
-      - @comments.each do |comment|
-        .text_chat_right
-          .text_chat_right_box
-            .text_chat_right_box_text
-              = comment.texta
-            .text_chat_right_box_name
-              = comment.user.name
+      - @comments.order(:id).each do |comment|
+        -if (comment.texta != nil)
+          .text_chat_right
+            = comment.texta
+        -else
+          .text_chat_left
+            = comment.textb
         .text_chat_clear 
       
-        .text_chat_left
-          .text_chat_left_box
-            .text_chat_left_box_text
-              = comment.textb
-            .text_chat_left_box_name
-              = comment.user.name
-        .text_chat_clear
-  
+  .form  
+    %form.form_all
+      .form_all_check1
+        %input.form_all_check1_input{:checked => "checked", :name => "maker", :onclick => "formSwitch()", :type => "radio", :value => "toyota"}/
+        %label.form_all_check1_label
+          .form_all_check1_moji
+            AGREE
+      .form_all_check2
+        %input.form_all_check2_input{:name => "maker", :onclick => "formSwitch()", :type => "radio", :value => "nissan"}/
+        %label.form_all_check2_label
+          .form_all_check2_moji
+            DISAGREE
+    %ul.form_in
+      #form_in_right 
+        .form_in_right
+          = form_for [@group, @comment] , html: {class: "new_comment1"} do |f|
+            .form_in_right_form
+              = f.text_field :texta, placeholder: ' AGREE', class: 'form_in_right_message'
+            = f.submit 'Send', class: 'form_in_right_submit'
+      
+      #form_in_left
+        .form_in_left 
+          = form_for [@group, @comment] , html: {class: "new_comment2"} do |f|
+            .form_in_left_form
+              = f.text_field :textb, class: 'form_in_left_message', placeholder: ' DISAGREE'
+            = f.submit 'Send', class: 'form_in_left_submit'
+    .form_exit
+      = link_to root_path class: "form_exit_icon" do
+        = icon("fas","running",class: "form_exit_icon_run")
+        
 
-  .main_box
-    .main_box_right
-      = form_for [@group, @comment] do |f|
-        .form__text
-          = f.text_field :texta, class: 'form__text__message', placeholder: 'type a message'
-        = f.submit 'Send', class: 'form__submit'
 
-    .main_box_right
-      = form_for [@group, @comment] do |f|
-        .form__text
-          = f.text_field :textb, class: 'form__text__message', placeholder: 'type a message'
-        = f.submit 'Send', class: 'form__submit'
-    .main_box_exit
-      = link_to "Exit", root_path, class: "main_box_exit_btn"
+    :javascript
+      function formSwitch() {
+          hoge = document.getElementsByName('maker')
+          if (hoge[0].checked) {
+              // トヨタが選択されたら下記を実行
+              document.getElementById('form_in_right').style.display = "";
+              document.getElementById('form_in_left').style.display = "none";
+          } else if (hoge[1].checked) {
+              // 日産が選択されたら下記を実行
+              document.getElementById('form_in_right').style.display = "none";
+              document.getElementById('form_in_left').style.display = "";
+          } else {
+              document.getElementById('form_in_right').style.display = "none";
+              document.getElementById('form_in_left').style.display = "none";
+      }
+          }
+          window.addEventListener('load', formSwitch());
+    
