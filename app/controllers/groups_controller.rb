@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   
   def index
-    @group = Group.all
+    @group = Group.all.order("created_at DESC")
   end
   
   def new
@@ -16,6 +16,12 @@ class GroupsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    group = Group.find(params[:id]) 
+    group.destroy
+    redirect_to root_path
   end
 
   private

@@ -1,42 +1,115 @@
 .text{
-  background-color: #008bbb;
+  background-color: #E0FFFF;
   height: calc(100vh - 200px);
   overflow: scroll;
     &_chat{
-    width: calc(100vw - 300px);
-    background-color: purple;
+    width: calc(100vw - 700px);
     margin: 0 auto;
-    padding: 0 50px;
-    font-size: 16px;
-    word-wrap: break-word;
-    white-space: normal;
+    font-size: 20px;
+
     &_right{
-      float: right;
-      line-height: 1.3em;
-      padding-top: 40px;
-      &_box{
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 2px solid #FFF;
-        border-radius: 20px 0px 20px 20px;
-      }
+      margin-top: 5px;
+      margin-right: 70%;
+      display: flex;
+      flex-direction: column;
+      word-break: break-all;
+      color: #fff;
+      padding: 7px 20px;
+      background-color: #FF4500;
+      border :1px solid #FF4500;
+      border-radius: 0px 10px 10px 10px;
+    }
+    &_left{
+      margin-top: 5px;
+      margin-left: 70%;
+      float:right;
+      padding: 7px 20px;
+      background-color: rgb(255,215,0);
+      border :1px solid rgb(255,215,0);
+      border-radius: 0px 10px 10px 10px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      word-break: break-all;
     }
     &_clear{
       clear: both;
     }
-    &_left{
-      float: left;
-      line-height: 1.3em;
-      padding-top: 10px;
-      &_box{
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 2px solid #FFF;
-        border-radius: 0px 20px 20px 20px;
+  }
+}
+.form{
+  background-image: url("https://images.pexels.com/photos/2096622/pexels-photo-2096622.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-size: cover;
+  background-color: #4682B4;
+  border-top: 10px ridge #fff;
+  width: 100%;
+  height: 100px;
+  padding-left: 30px;
+  position: relative;
+  &_all{
+    display: flex;
+    font-size: 18px;
+    &_check1_moji{
+      color: #FF4500;
+      margin-right: 30px;
+    }
+    &_check2_moji{
+      color: rgb(255,215,0);
+    }
+  }
+  &_in{
+    &_right{
+      position: relative;
+      &_message{
+        width: 300px;
+        height: 30px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 5px solid #fff;
+      }
+      &_submit{
+        background-color: #FF4500;
+        position: absolute;
+        top: 0px;
+        left: 300px;
+        margin-left: 20px;
+        padding: 5px 20px;
       }
     }
-      &_clear{
-      clear: both;
+    &_left{
+      &_message{
+        width: 300px;
+        height: 30px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 5px solid #fff;
+      }
+      &_submit{
+        background-color: rgb(255,215,0);
+        position: absolute;
+        bottom: 25px;
+        left: 330px;
+        margin-left: 20px;
+        padding: 5px 20px;
+      }
+    }
+  }
+  &_exit{
+    margin-top: 30px;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 600px;
+    &_icon{
+      &_run{
+        font-size: 55px;
+        color: #fff;
+        transition: 0.5s;
+      }
+      &_run:hover{
+        color: rgb(255,215,0);
+        transform: translate(500px, 0px,);
+      }
     }
   }
 }

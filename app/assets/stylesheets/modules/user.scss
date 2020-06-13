@@ -1,62 +1,79 @@
 .account-page {
+  background-image: url("https://images.pexels.com/photos/3184396/pexels-photo-3184396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  font-family: "genkai-mincho";
+  color: #fff;
   .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
-    padding: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-
+    width: 500px;
+    position: relative;
+    top: 120px;
+    left:500px;
+    padding: 20px 100px;
+    background-color: rgba(112, 128, 144, 0.7);
+    border-radius: 20px;
     .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 50%;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 20px;
+      
     }
-    &:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
+    // &:after {
+    //   clear: both;
+    //   content: "";
+    //   display: block;
+    // }
   }
 
   .account-page__header {
     h2 {
-      margin-bottom: 10px;
+      margin: 0 45px;
       letter-spacing: 3px;
-      font-size: 40px;
+      font-size: 20px;
       font-weight: 200;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
-      }
+      // &:after {
+      //   margin: 0 auto;
+      //   content: '';
+      //   display: block;
+      //   width: 60px;
+      //   margin-top: 5px;
+      //   border-bottom: 1px solid #38aef0;
+      // }
     }
 
     h5 {
+      padding-top: 10px;
       margin-bottom: 20px;
       font-size: 14px;
       font-weight: 200;
+      margin: 0 70px;
     }
 
     .btn {
       margin-top: 20px;
       color: #fff;
-      background-color: #ccc;
-      font-size: 14px;
+      background-color: rgba(255,215,0, 0.5);
+      font-size: 20px;
+      transition: background-color 0.5s, border-radius 0.5s;
+    }
+    .btn:hover{
+      background-color: rgba(255,215,0, 0.7);
+      color: #fff;
+      border-radius: 20px;
+      transition: background-color 0.5s, border-radius 0.5s;
     }
   }
 
   .field {
     margin-bottom: 10px;
-
     .field-label {
-      padding: 10px 0;
+      margin-bottom: 5px;
       letter-spacing: 1px;
       font-size: 14px;
       font-weight: 200;
-
+      border: none;
       i {
         font-size: 11px;
       }
@@ -64,31 +81,43 @@
 
     .field-input {
       input {
+        color: #fff;
         width: 100%;
         padding: 10px;
         letter-spacing: 1px;
+        border: none;
+        border-bottom: 5px solid #008bbb;
+        background-color: rgba(112, 128, 144, 0);
       }
     }
   }
 
   .btn {
-    display: inline-block;
+    display: block;
+    font-size: 20px;
     height: 50px;
-    padding: 0 30px;
+    padding: 0 75px;
     line-height: 50px;
     letter-spacing: 1px;
     text-align: center;
     border: none;
     border-radius: 2px;
+    transition: background-color 0.5s,border-radius 0.5s;
   }
+  
 
   input[type='submit'] {
-    float: left;
+    // float: left;
     margin-top: 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: rgba(0, 139, 187, 0.5);
+    transition: background-color 0.5s,border-radius 0.5s;
   }
-
+  .btn:hover{
+    color: #fff;
+    background-color: rgba(0, 139, 187, 1);
+    transition: background-color 0.5s,border-radius 0.5s;
+  }
   .field-label {
     .field_with_errors {
       display: inline-block;

@@ -1,3 +1,10 @@
-=form_for @group do |f|
-  = f.text_field :title, class: "xxx-form__input", placeholder: "グループ名を入力してください"
-  = f.submit "Save", class: "xxx-form__action-btn"
+.group_form
+  .group_form_box
+    .group_form_box_name
+      .p What's
+      %br your
+      %br question?
+    .group_form_box_inner
+      =form_for @group do |f|
+        = f.text_field :title, class: "group_form_box_inner_input", placeholder: "What's up ?"
+        = f.submit "Save", class: "group_form_box_inner_action"
