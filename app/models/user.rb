@@ -9,5 +9,6 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: true, uniqueness: true, length: {minimum: 6 }
 
   has_many :group
+  has_many :profile
   has_many :comments
 end

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  
+
   def edit
   end
 
@@ -9,7 +11,13 @@ class UsersController < ApplicationController
       render :edit
     end
   end
-  
+
+  def show
+    @user = User.find(params[:id])
+    @group = @user.group.order("created_at DESC")
+    @profiles = @user.profile.includes(:user)
+    
+  end
   private
 
   def user_params
