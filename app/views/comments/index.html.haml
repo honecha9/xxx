@@ -1,9 +1,7 @@
 .main
   .main_header
-    .main_header_logo
-      = @group.title
-      .main_header_logo_icon
-        = icon("far", "comment-dots")
+    .main_header_logoo
+      =  @group.title
     .main_header_item
       .main_header_item_edit
         = link_to edit_user_path(current_user),  class: "main_header_item_edit_icon" do
@@ -16,9 +14,13 @@
         -if (comment.texta != nil)
           .text_chat_right
             = comment.texta
+            .text_chat_right_name
+              = comment.user.name
         -else
           .text_chat_left
             = comment.textb
+            .text_chat_left_name
+              = comment.user.name
         .text_chat_clear 
       
   .form  

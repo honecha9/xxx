@@ -1,0 +1,89 @@
+.person{
+  width: 100vw;
+  height: 100vh;
+  font-family: "genkai-mincho";
+  color: #fff;
+  &_header{
+    height: 100px;
+    width: 100vw;
+    background-color: rgba(0, 139, 187, 0.6);
+    border-bottom: 5px ridge #fff;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    &_logo{
+      font-size: 60px;
+      line-height: 100px;
+    }
+    &_user{
+      padding-right: 60px;
+      line-height: 100px;
+      color: #00FFFF;
+      font-size: 40px;
+      letter-spacing: 3px;
+    }
+  }
+  &_main{
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    &_image{
+      width: calc(100vw - 1000px);
+      
+      .img{
+        width: calc(100vw - 1000px);
+        height: calc(100vh - 100px);
+      }
+    }
+    &_form{
+      background-color: #EEEEEE;
+      width: 1000px;
+      height: calc(100vh - 100px);
+      &_field{
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 20px;
+        &_stuff{
+          margin: 10px 0;
+          &_label{
+            padding-bottom: 10px;
+            color: #555555;
+          }
+          &_input{
+            .text-feild{
+              border: none;
+              padding: 5px 20px;
+              background-color: rgba(0, 139, 187, 0);
+              border-bottom: 3px solid #00FFFF;
+              border-left: 5px solid #00FFFF;
+              border-radius: 10px;
+              box-shadow: 5px 5px #555555	;
+            }
+            ::placeholder{
+              color: #555555;
+            }
+          }
+        }
+        &_actions{
+          width: 100%;
+          .submit{
+            margin-top: 30px;
+            width: 50%;
+            background-color: #00FFFF;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 5px 5px;
+            transition: 0.1s;
+            padding: 10px 0px;
+          }
+          .submit:hover{
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  } 
+}

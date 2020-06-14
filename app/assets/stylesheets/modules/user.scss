@@ -81,13 +81,14 @@
 
     .field-input {
       input {
+        font-family: none;
         color: #fff;
         width: 100%;
         padding: 10px;
         letter-spacing: 1px;
         border: none;
         border-bottom: 5px solid #008bbb;
-        background-color: rgba(112, 128, 144, 0);
+        background-color: rgba(112, 128, 144, 1);
       }
     }
   }

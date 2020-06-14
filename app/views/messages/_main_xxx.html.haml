@@ -6,18 +6,16 @@
         = icon("far", "comment-dots")
     .main_header_item
       .main_header_item_edit
-        = ( "Edit" )
+        =link_to "My page", user_path(current_user), class: "main_header_item_edit_icon"
           
       .main_header_item_login
         = link_to edit_user_path(current_user),  class: "main_header_item_login_user" do
           = current_user.name
-  
-  
   .main_body
     .main_body_topics
       =link_to "Let's conversation!!", new_group_path , class:"main_body_topics_con"
       - @group.each do | group |
-        .main_body_topics_group 
+        .main_body_topics_group
           .main_body_topics_group_title
             = group.title
           .main_body_topics_group_btn

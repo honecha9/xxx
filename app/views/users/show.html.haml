@@ -1,0 +1,40 @@
+.main
+  .main_header
+    .main_header_logo
+      = current_user.name
+  .main_show
+    .main_show_left
+      .main_show_left_image
+      .main_show_left_name
+        = current_user.name
+        .main_show_left_name_edit 
+          = link_to new_user_profile_path(current_user) do
+            = icon("fas","user-cog", class: "main_show_left_name_edit_icon" )
+
+      .main_show_left_profile
+        - @profiles.order(:id).each do |profile|
+          .main_show_left_profile_sex.main_show_left_profile_all
+            SEX : 
+            = profile.sex
+          .main_show_left_profile_like.main_show_left_profile_all
+            LIKE : 
+            = profile.like
+          .main_show_left_profile_dislike.main_show_left_profile_all
+            DISLIKE :
+            = profile.dislike
+          .main_show_left_profile_think.main_show_left_profile_all
+            THOUGHT(思想) : 
+            = profile.thinking
+          .main_show_left_profile_think.main_show_left_profile_all
+            LIVE : 
+            = profile.live
+
+    .main_show_right
+      .main_show_right_stuff
+        - @group.each do |group|
+          .main_show_right_stuff_item
+            .main_show_right_stuff_item_title
+              = link_to group.title,  group_comments_path(group),  class: "main_show_right_stuff_item_title_enter"
+            .main_show_right_stuff_item_time
+              = group.created_at.strftime("%Y-%m-%d %H:%M")
+
