@@ -11,7 +11,7 @@ Rails.application.configure do
   config.eager_load = true
   config.assets.compile = true
   config.assets.initialize_on_precompile=false
-
+  config.assets.debug = false
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
