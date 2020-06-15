@@ -15,6 +15,7 @@ module Xxx
       g.test_framework false
     end
     config.time_zone = 'Asia/Tokyo'
+    config.assets.initialize_on_precompile = false
   end
   
 end

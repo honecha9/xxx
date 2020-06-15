@@ -55,4 +55,4 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 gem 'devise'
 gem 'pry-rails'
-
+gem 'rails_12factor', group: :production
