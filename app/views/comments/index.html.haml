@@ -3,11 +3,11 @@
     .main_header_logoo
       =  @group.title
     .main_header_item
-      .main_header_item_edit
-        = link_to edit_user_path(current_user),  class: "main_header_item_edit_icon" do
-          = ( "Edit" )    
-      .main_header_item_login
-        = current_user.name
+      -# .main_header_item_edit
+      -#   = link_to edit_user_path(current_user),  class: "main_header_item_edit_icon" do
+      -#     = ( "Edit" )    
+      -# .main_header_item_login
+      -#   = current_user.name
   .text
     .text_chat
       - @comments.order(:id).each do |comment|

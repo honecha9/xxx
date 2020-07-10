@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  
+
 
   def edit
   end
@@ -15,8 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @group = @user.group.order("created_at DESC")
-    @profiles = @user.profile.includes(:user)
-    
+    @profiles = @user.profile.includes(:user_id)
   end
   private
 

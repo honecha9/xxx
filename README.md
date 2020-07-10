@@ -1,23 +1,45 @@
-# High Ronpa
-High Ronpa is place of conversation with someone in web application.
-There are so many problems around of you and me they are many kind of problems, like easy problems or difficult problems or problem you can't solve. I would like to share them problems and please debate them. 
-then Please make the future what we make smile each other.
-Thank you.
+# High Ronpa!
+
+# アプリの概要
+  討論型アプリ
+  討論といえば堅く聞こえますが、ソフトにいえば、ミートアップです。
+
+# 企画背景
+  誹謗中傷が問題になっている今日、コメントで悪口を書いたりだとか、みなさんもアンチコメントを見ない日は無いと思います。
+  でも大体の人は、投稿に関して良い案を出す事や、前向きな意見を述べる訳ではなく、勝ち負けに拘っていると感じました。
+  他人の意見を否定し、論破したという思考が働いている気がします。赤の他人に負けたくない気持ちだと思います、勝負をしたいのかなと感じ、
+  じゃあそういう勝負できる場所を作ってゲーム感覚で割り切って楽しんでもえればいいと思い作りました。
+  ゲーム感覚なら多少は誹謗中傷も減ると考えています。
+
+
+# 開発環境
+  フロントエンド: HAML / SCSS / JQuery
+  バックエンド : Ruby on Rails
+  インフラ : Heroku
+
+
+# 機能
+  1.題目の投稿機能
+  2.賛成、反対の選択機能
+  3.コメント機能
+  4.題目の削除機能
+  5.マイページ機能
+  6.ユーザー登録 /ログイン・ログアウト機能
+
+
+# 使い方
+  1.デモページリンクをクリックするとTopページに遷移します → https://high-ronpa.herokuapp.com/
+  2.ユーザー登録をお願い致します。
+    パスワードは8文字以上必要になります。
+  3.題目の新規投稿は、Let's conversationの文字をクリックした投稿画面に遷移します。
+  4.各題目の部屋に agree 又は disagree を選択しコメントを行ってください。
+  5.トップページ右上のユーザーネームからマイページに遷移できます。
 
  
-# DEMO
- you can debate something from both side agree and disagree with someone.
-
- 
-# Features
- it's not normally chat app. you can choose your opinion and insist it. 
- and chat view is easy to understand someone is agree or not.
- 
-# Requirement
- Rails 5.0.7.2
- 
-# Installation
- 
+# 作者
+  中塚聡一朗
+  Wantedly : https://www.wantedly.com/users/138335088
+  
 # Usage
  
 

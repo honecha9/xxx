@@ -6,10 +6,9 @@
         = icon("far", "comment-dots")
     .main_header_item
       .main_header_item_edit
-        =link_to "My page", user_path(current_user), class: "main_header_item_edit_icon"
-          
+        = link_to "My page",user_path(current_user), class: "main_header_item_edit_icon"
       .main_header_item_login
-        = link_to edit_user_path(current_user),  class: "main_header_item_login_user" do
+        = link_to edit_user_path(current_user), class: "main_header_item_login_user" do
           = current_user.name
   .main_body
     .main_body_topics
