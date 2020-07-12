@@ -1,15 +1,5 @@
 .main
-  .main_header
-    .main_header_logo
-      High Ronpa!
-      .main_header_logo_icon
-        = icon("far", "comment-dots")
-    .main_header_item
-      .main_header_item_edit
-        = link_to "My page",user_path(current_user), class: "main_header_item_edit_icon"
-      .main_header_item_login
-        = link_to edit_user_path(current_user), class: "main_header_item_login_user" do
-          = current_user.name
+  =render "header"
   .main_body
     .main_body_topics
       =link_to "Let's conversation!!", new_group_path , class:"main_body_topics_con"

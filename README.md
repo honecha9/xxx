@@ -39,18 +39,19 @@
 # 作者
   中塚聡一朗
   Wantedly : https://www.wantedly.com/users/138335088
-  
-# Usage
- 
 
- 
-# Note
- 
- 
-# Author
-* Soichiro a.k.a Hornet93
-* hoge@hoge
- 
-# License
- 
-"High Ronpa" is Confidential.
+# メイン機能の紹介
+## トップページ
+https://gyazo.com/d2c549dd4eb648baf694c7c3e996548f
+
+## 新規投稿ページ
+https://gyazo.com/2626d603ecd5cc29f60ff8c103462789
+
+## 討論部屋
+https://gyazo.com/537920fbc261c3e62ddb54642a8b7198
+
+## マイページ
+https://gyazo.com/1e93d482e79c1e438e77a1c5d99b21ec
+
+## ユーザー登録ページ
+https://gyazo.com/c5bfce98e0dd825a380563a7b5708cfb
