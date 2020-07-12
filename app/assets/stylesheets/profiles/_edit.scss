@@ -1,0 +1,12 @@
+.profile_edit_content{
+  width: 100vw;
+  height: 100vh;
+  font-family: "genkai-mincho";
+  .edit_main{
+    height: calc(100vh - 100px);
+    display: flex;
+    &_form{
+      margin: 0 auto;
+    }
+  }
+}

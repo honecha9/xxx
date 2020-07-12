@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @group = @user.group.order("created_at DESC")
-    @profiles = @user.profile.includes(:user_id)
+    @profile = Profile.find_by(user_id: params[:id])
   end
   private
 

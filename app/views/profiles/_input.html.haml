@@ -1,0 +1,32 @@
+=form_for [@user, @profile] do |f|
+  .person_main_form_field
+    .person_main_form_field_stuff
+      .person_main_form_field_stuff_label
+        = f.label :sex
+      .person_main_form_field_stuff_input
+        =f.text_field :sex, placeholder: '性別を記入してください', class: "text-feild"
+    .person_main_form_field_stuff
+      .person_main_form_field_stuff_label
+        =f.label :like
+      .person_main_form_field_stuff_input
+        =f.text_field :like, placeholder: '好きな物を記入してください', class: "text-feild"
+    .person_main_form_field_stuff
+      .person_main_form_field_stuff_label
+        =f.label :dislike
+      .person_main_form_field_stuff_input
+        =f.text_field :dislike, placeholder: '嫌いな物を記入してください', class: "text-feild"
+    .person_main_form_field_stuff
+      .person_main_form_field_stuff_label
+        =f.label :thinking
+      .person_main_form_field_stuff_input
+        =f.text_field :thinking, placeholder: '思想を記入してください', class: "text-feild"
+    .person_main_form_field_stuff
+      .person_main_form_field_stuff_label
+        =f.label :live
+      .person_main_form_field_stuff_input
+        =f.text_field :live, placeholder: '居住地を記入してください', class: "text-feild"
+    .person_main_form_field_actions
+      - if @profile.persisted?
+        =f.submit "CHANGE", class: "submit"
+      -else
+        =f.submit "SAVE" , class: "submit"
