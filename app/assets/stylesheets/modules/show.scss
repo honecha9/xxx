@@ -27,17 +27,19 @@
       border-left: 10px solid rgb(255,215,0);
       font-size: 40px;
       display: flex;
-      &_edit{
-        color: #1E90FF;
-        padding-left: 20px;
-        &_icon{
-          color: #1E90FF;
-          transition: 1s;
-        }
-        &_icon:hover{
-          color:#FF00FF;
-          transform: rotate(720deg);
-        }
+    }
+    &_edit{
+      .link_tag{
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .link_tag:hover{
+        color: blue;
+        letter-spacing: 30px;
       }
     }
     &_profile{

@@ -42,7 +42,7 @@
 
 # メイン機能の紹介
 ## トップページ
-https://gyazo.com/d2c549dd4eb648baf694c7c3e996548f
+![トップページ]（https://gyazo.com/d2c549dd4eb648baf694c7c3e996548f）
 
 ## 新規投稿ページ
 https://gyazo.com/2626d603ecd5cc29f60ff8c103462789

@@ -6,14 +6,17 @@
       .main_show_left_image
       .main_show_left_name
         = current_user.name
-        .main_show_left_name_edit
-          -if @profile.blank?
-            = link_to new_user_profile_path(current_user) do
-              = icon("fas","user-cog", class: "main_show_left_name_edit_icon" )
-          -else
-            =link_to "Edit" , edit_user_profile_path(@profile)
+      .main_show_left_edit
+        -if @profile.blank?
+          = link_to "Brand new", new_user_profile_path(current_user), class: "link_tag"
+
+        -elsif @profile.user_id == current_user.id
+          =link_to "Edit",edit_user_profile_path(@profile), class: "link_tag"
+          = link_to  "show",user_profile_path(@user, @profile), class: "link_tag"
+
+        -else
+          = link_to  "show",user_profile_path(@user, @profile), class: "link_tag"
       .main_show_left_prof
-        
 
     .main_show_right
       .main_show_right_stuff

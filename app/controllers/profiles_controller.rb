@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user
+  # before_action :set_user
   before_action :set_profile, only: [:edit, :update]
 
   def new
@@ -16,6 +16,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def update
@@ -27,20 +28,21 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @profile = Profile.find(params[:id])
   end
 
   private
   def profile_params
-    params.require(:profile).permit(:sex,:like,:dislike,:thinking,:live).merge(user_id: current_user.id)
+    params.require(:profile).permit(:sex,:like,:dislike,:thinking,:live, :problem,:solution).merge(user_id: current_user.id)
   end
 
   def set_profile
     @profile = Profile.find_by(user_id: current_user.id)
   end
 
-  def set_user
-    @user = User.find_by(params[:id])
-  end
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 
 
 end
