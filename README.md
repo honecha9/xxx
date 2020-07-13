@@ -42,16 +42,16 @@
 
 # メイン機能の紹介
 ## トップページ
-[![Image from Gyazo](https://i.gyazo.com/5969f1a0dce6dd2b9c70f1e355e596b5.jpg)](https://gyazo.com/5969f1a0dce6dd2b9c70f1e355e596b5)
+[![Image from Gyazo](https://i.gyazo.com/8897b5a1666d4d6f0249f2779043b6b2.jpg)](https://gyazo.com/8897b5a1666d4d6f0249f2779043b6b2)
 
 ## 新規投稿ページ
-https://gyazo.com/2626d603ecd5cc29f60ff8c103462789
+[![Image from Gyazo](https://i.gyazo.com/cf7a857b1fc02aeaf63dc506a9f17cfd.jpg)](https://gyazo.com/cf7a857b1fc02aeaf63dc506a9f17cfd)
 
 ## 討論部屋
-https://gyazo.com/537920fbc261c3e62ddb54642a8b7198
+[![Image from Gyazo](https://i.gyazo.com/97175ac6777062924d81d81c6b9ac25c.png)](https://gyazo.com/97175ac6777062924d81d81c6b9ac25c)
 
 ## マイページ
-https://gyazo.com/1e93d482e79c1e438e77a1c5d99b21ec
+[![Image from Gyazo](https://i.gyazo.com/adc30ce440a186cd81d9878b090bfc93.jpg)](https://gyazo.com/adc30ce440a186cd81d9878b090bfc93)
 
 ## ユーザー登録ページ
-https://gyazo.com/c5bfce98e0dd825a380563a7b5708cfb
+[![Image from Gyazo](https://i.gyazo.com/49c5f616116d1277c02c32787aa9f5bf.jpg)](https://gyazo.com/49c5f616116d1277c02c32787aa9f5bf)
