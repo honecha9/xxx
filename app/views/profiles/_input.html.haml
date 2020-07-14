@@ -21,24 +21,20 @@
           =f.label :dislike,"嫌いなもの"
         .person_main_form_field_myself_stuff_input
           =f.text_field :dislike, placeholder: '嫌いな物を記入してください', class: "person_main_form_field_myself_stuff_input_inner"
-    
     .person_main_form_field_long
       .person_main_form_field_long_text
         .person_main_form_field_long_text_label
           =f.label :thinking, "紹介文"
         .person_main_form_field_long_text_input
           =f.text_area :thinking, class:"person_main_form_field_long_text_input_inner"
-      
       .person_main_form_field_long_problem
-        = f.label :problem , "今一番聞きなる社会問題"
+        = f.label :problem , "今一番気になる社会問題"
         = f.text_field :problem, class:"person_main_form_field_long_problem_input"
-      
       .person_main_form_field_long_text
         .person_main_form_field_long_text_label
-          =f.label :solution, "問題に関しての解決策"
+          =f.label :solution, "問題に関してのオピニオン"
         .person_main_form_field_long_text_input
           =f.text_area :solution, class:"person_main_form_field_long_text_input_inner"
-        
       .person_main_form_field_long_actions
         - if @profile.persisted?
           =f.submit "CHANGE", class: "submit"

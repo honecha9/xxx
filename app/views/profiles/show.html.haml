@@ -3,3 +3,30 @@
     = render "groups/header"
   .show_main
     .show_main_details
+      .user_image
+      .user_info
+        .user_info_myself
+          %h1性別
+          .inner
+            = @profile.sex
+          %h1好きなもの
+          .inner
+            = @profile.like
+          %h1嫌いなもの
+          .inner
+            = @profile.dislike
+          %h1出身
+          .inner
+            = @profile.live
+        .user_info_long
+          .user_info_long_intro
+            %h1紹介文
+            = @profile.thinking
+          .user_info_long_problem
+            %h1今一番気になる社会問題
+
+            ="問題: #{@profile.problem}"
+            .user_info_long_problem_solution
+              %h1問題に関してのオピニオン
+              .user_info_long_problem_solution_text
+                = safe_join(@profile.solution.split("\n"),tag(:br))
