@@ -11,4 +11,9 @@ class User < ApplicationRecord
   has_many :group
   has_one :profile
   has_many :comments
+
+  def self.search(search)
+    return User.all() unless search
+    User.where('name LIKE(?)', "%#{search}%")
+  end
 end

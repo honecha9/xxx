@@ -5,6 +5,10 @@
     .main_header_logo_icon
       = icon("far", "comment-dots")
   .main_header_item
+    .main_header_item_search
+      = form_tag search_users_path, method: :get do
+        = text_field_tag :search
+        = submit_tag "send"
     .main_header_item_edit
       = link_to "My page",user_path(current_user), class: "main_header_item_edit_icon"
     .main_header_item_login
