@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root "groups#index"
   resources :users, only: [:edit, :update, :show] do
     resources :profiles, only:[:new, :create, :edit, :update, :show]
+    collection do
+      get 'search'
+    end
   end
   resources :groups, only: [ :index, :new, :create, :destroy ] do
     resources :comments, only: [:index , :new, :create]

@@ -1,0 +1,20 @@
+.search_show_content{
+  width: 100vw;
+  height: 100vh;
+  .search_result{
+    height: calc(100vh - 100px);
+    .result_users{
+      background-color: #dcdcdc;
+      width: 60%;
+      height: 100%;
+      margin: 0 auto;
+      .users_all{
+        padding: 30px 50px;
+        .user_one{
+          background-color: #fff;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

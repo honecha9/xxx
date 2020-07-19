@@ -17,6 +17,11 @@ class UsersController < ApplicationController
     @group = @user.group.order("created_at DESC")
     @profile = Profile.find_by(user_id: params[:id])
   end
+
+  def search
+    @users = User.all.search(params[:search])
+    @profiles = Profile.all
+  end
   private
 
   def user_params
