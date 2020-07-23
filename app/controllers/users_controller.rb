@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-
   def edit
   end
 
@@ -20,9 +19,12 @@ class UsersController < ApplicationController
 
   def search
     @users = User.all.search(params[:search])
-    @profiles = Profile.all
   end
   private
+
+  def set_pro
+    User.joins(:profiles)
+  end
 
   def user_params
     params.require(:user).permit(:name, :email)
