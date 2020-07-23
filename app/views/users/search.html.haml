@@ -3,12 +3,11 @@
     =render "groups/header"
   .search_result
     .result_users
+      %p SEARCH RESULT
       .users_all
-        - @users.zip(@profiles).each do |user,profile|
+        - @users.each do |user|
           %ul
             %li
-            = link_to user_path(user) do
+            = link_to user_path(user), class: "user_link" do
               .user_one
                 = "ユーザー：#{user.name}"
-                %li.search_details
-                ="紹介文: #{profile.thinking}"
